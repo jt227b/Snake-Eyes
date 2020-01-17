@@ -14,8 +14,8 @@
 }
 
 body {
-  background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(back.jpg);
-  background-size: cover;
+  background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(/img/blur.jpg);
+  background-size: 100;
   background-position: center;
   font-family: Lato;
   font-weight: 300;
@@ -23,6 +23,7 @@ body {
   height: 100vh;
   color: #555;
 }
+
 
 .wrapper {
   width: 1000px;
