@@ -3,7 +3,7 @@ Feeling lucky? Roll the dice with a friend, the first one to make 100 points is 
 
 ## Getting Started
 
-The youngest player rolls the first dice!
+The youngest player is Player 1 and rolls the first dice!
 
 ## Deployment
 
