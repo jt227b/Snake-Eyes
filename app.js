@@ -9,22 +9,9 @@ GAME RULES:
 
 var scores, roundScore, activePlayer;
 
-scores = [0, 0];
-roundScore = 0;
-activePlayer = 0;
-
-// Math Object (math.floor rounds up the decimal)
-
-//Manipulates the current box on game using the DOM
+init();
 
 
-document.querySelector('.dice').style.display = 'none';
-
-// Sets counter from 19 85 to 0
-document.getElementById('score-0').textContent = '0';
-document.getElementById('score-1').textContent = '0';
-document.getElementById('current-0').textContent = '0';
-document.getElementById('current-1').textContent = '0';
 
 document.querySelector('.btn-roll').addEventListener('click', function () {
 
@@ -56,8 +43,8 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
   // 2. Update the UI User Interface
   document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
 
-  // 3. Check if player won the game
-  if (scores[activePlayer] >= 100) {
+  // 3. Check if player won the game /////////////////////////////////////////////////////////////////////////  Change back to 100
+  if (scores[activePlayer] >= 10) {
     document.querySelector('#name-' + activePlayer).textContent = "Winner!";
     document.querySelector('.dice').style.display = 'none';
     document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
@@ -67,12 +54,11 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
     nextPlayer();
   }
 
-  // Next Player
-  nextPlayer();
+
 });
 
 
-// DON'T REPEAT YOUR CODE RULE - nextPlayer Function
+// DON'T REPEAT YOUR CODE RULE (Dry Principle) - nextPlayer Function
 function nextPlayer() {
   activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
   roundScore = 0;
@@ -87,4 +73,33 @@ function nextPlayer() {
   //document.querySelector('.player-1-panel').classList.add('active');      one way or adding and removing
 
   document.querySelector('.dice').style.display = 'none';
+}
+
+document.querySelector('.btn-new').addEventListener('click', init);
+
+// Initial Function
+function init() {
+  scores = [0, 0];
+  activePlayer = 0;
+  roundScore = 0;
+
+  // Math Object (math.floor rounds up the decimal)
+
+  //Manipulates the current box on game using the DOM
+
+
+  document.querySelector('.dice').style.display = 'none';
+
+  // Sets counter from 19 85 to 0
+  document.getElementById('score-0').textContent = '0';
+  document.getElementById('score-1').textContent = '0';
+  document.getElementById('current-0').textContent = '0';
+  document.getElementById('current-1').textContent = '0';
+  document.getElementById('name-0').textContent = 'Player 1';
+  document.getElementById('name-1').textContent = 'Player 2';
+  document.querySelector('.player-0-panel').classList.remove('winner');
+  document.querySelector('.player-1-panel').classList.remove('winner');
+  document.querySelector('.player-0-panel').classList.remove('active');
+  document.querySelector('.player-1-panel').classList.remove('active');
+  document.querySelector('.player-0-panel').classList.add('active');
 }
