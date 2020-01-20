@@ -35,12 +35,15 @@ HTML, CSS and JavaScript
 
 Landing Page:
 
+![snakeEyes1](https://user-images.githubusercontent.com/46248532/72752073-e8772400-3b86-11ea-8c5b-cdc664894cba.png)
 
+Playing Page:
 
+![snakeEyes2](https://user-images.githubusercontent.com/46248532/72752080-eca34180-3b86-11ea-8770-7808b1439d81.png)
 
 Winner Page:
 
-
+![snakeEyes3](https://user-images.githubusercontent.com/46248532/72752089-f167f580-3b86-11ea-84d0-e12b0b23138f.png)
 
 
 
